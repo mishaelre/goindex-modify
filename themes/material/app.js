@@ -714,7 +714,7 @@ function file_code(path) {
 	<label class="mdui-textfield-label">下载地址</label>
 	<input class="mdui-textfield-input" type="text" value="${href}"/>
 </div>
-<a href="${href}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="${href}"  class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 
 <script src="https://cdn.staticfile.org/ace/1.4.7/ace.js"></script>
 <script src="https://cdn.staticfile.org/ace/1.4.7/ext-language_tools.js"></script>
@@ -802,7 +802,7 @@ function file_video(path) {
 	  <textarea class="mdui-textfield-input"><video><source src="${url}" type="video/mp4"></video></textarea>
 	</div>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="${url}"  style="display:none" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
   $('#content').html(content);
   $('#copy-link').on('click', () => {
@@ -815,7 +815,7 @@ function file_video(path) {
 function file_audio(path) {
   var url = window.location.origin + path;
   var content = `
-<div class="mdui-container-fluid" style="display:none">
+<div class="mdui-container-fluid">
 	<br>
 	<audio class="mdui-center" preload controls>
 	  <source src="${url}"">
@@ -831,7 +831,7 @@ function file_audio(path) {
 	  <textarea class="mdui-textfield-input"><audio><source src="${url}"></audio></textarea>
 	</div>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="${url}"  style="display:none" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
   $('#content').html(content);
 }
@@ -896,7 +896,7 @@ function file_image(path) {
     // </div>
   }
   var content = `
-<div class="mdui-container-fluid" style="display:none">
+<div class="mdui-container-fluid">
     <br>
     <div id="imgWrap">
         ${targetText}
@@ -917,7 +917,7 @@ function file_image(path) {
 	</div>
         <br>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="${url}"  style="display:none" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons" >file_download</i></a>
     `;
   //my code
   $('#content').html(content);

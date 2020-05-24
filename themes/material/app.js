@@ -710,7 +710,7 @@ function file_code(path) {
 <div class="mdui-container">
 <pre id="editor" ></pre>
 </div>
-<div class="mdui-textfield">
+<div class="mdui-textfield" style="display:none">
 	<label class="mdui-textfield-label">下载地址</label>
 	<input class="mdui-textfield-input" type="text" value="${href}"/>
 </div>
@@ -780,7 +780,7 @@ function file_video(path) {
   player_items += `<li class="mdui-divider"></li>
                    <li class="mdui-menu-item"><a id="copy-link" class="mdui-ripple">复制链接</a></li>`;
   const playBtn = `
-      <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-menu="{target:'#player-items'}">
+      <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-menu="{target:'#player-items'}"  style="display:none">
         <i class="mdui-icon material-icons">&#xe039;</i>外部播放器播放<i class="mdui-icon material-icons">&#xe5cf;</i>
       </button>
       <ul class="mdui-menu" id="player-items">${player_items}</ul>`;
@@ -793,11 +793,11 @@ function file_video(path) {
 	</video>
 	<br>${playBtn}
 	<!-- 固定标签 -->
-	<div class="mdui-textfield">
+	<div class="mdui-textfield" style="display:none">
 	  <label class="mdui-textfield-label">下载地址</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
-	<div class="mdui-textfield">
+	<div class="mdui-textfield" style="display:none">
 	  <label class="mdui-textfield-label">HTML 引用地址</label>
 	  <textarea class="mdui-textfield-input"><video><source src="${url}" type="video/mp4"></video></textarea>
 	</div>
@@ -815,18 +815,18 @@ function file_video(path) {
 function file_audio(path) {
   var url = window.location.origin + path;
   var content = `
-<div class="mdui-container-fluid">
+<div class="mdui-container-fluid" style="display:none">
 	<br>
 	<audio class="mdui-center" preload controls>
 	  <source src="${url}"">
 	</audio>
 	<br>
 	<!-- 固定标签 -->
-	<div class="mdui-textfield">
+	<div class="mdui-textfield" style="display:none">
 	  <label class="mdui-textfield-label">下载地址</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
-	<div class="mdui-textfield">
+	<div class="mdui-textfield" style="display:none">
 	  <label class="mdui-textfield-label">HTML 引用地址</label>
 	  <textarea class="mdui-textfield-input"><audio><source src="${url}"></audio></textarea>
 	</div>
@@ -896,22 +896,22 @@ function file_image(path) {
     // </div>
   }
   var content = `
-<div class="mdui-container-fluid">
+<div class="mdui-container-fluid" style="display:none">
     <br>
     <div id="imgWrap">
         ${targetText}
 	    <img class="mdui-img-fluid" src="${url}"/>
     </div>
 	<br>
-	<div class="mdui-textfield">
+	<div class="mdui-textfield" style="display:none">
 	  <label class="mdui-textfield-label">下载地址</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
-	<div class="mdui-textfield">
+	<div class="mdui-textfield" style="display:none">
 	  <label class="mdui-textfield-label">HTML 引用地址</label>
 	  <input class="mdui-textfield-input" type="text" value="<img src='${url}' />"/>
 	</div>
-        <div class="mdui-textfield">
+        <div class="mdui-textfield" style="display:none">
 	  <label class="mdui-textfield-label">Markdown 引用地址</label>
 	  <input class="mdui-textfield-input" type="text" value="![](${url})"/>
 	</div>

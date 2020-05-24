@@ -137,10 +137,10 @@ function nav(path) {
         </div>`;
 
   // 个人盘 或 团队盘
-  if (model.root_type < 2) {
+  //if (model.root_type < 2) {
     // 显示搜索框
     html += search_bar;
-  }
+  //}
 
   $('#nav').html(html);
   mdui.mutation();

@@ -136,8 +136,8 @@ function nav(path) {
             <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
         </div>`;
 
-  // 个人盘 或 团队盘 model.root_type < 2
-  if (1=1) {
+  // 个人盘 或 团队盘
+  if ( model.root_type < 2) {
     // 显示搜索框
     html += search_bar;
   }

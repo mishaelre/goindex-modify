@@ -137,7 +137,7 @@ function nav(path) {
         </div>`;
 
   // 个人盘 或 团队盘
-  if ( model.root_type < 2) {
+  if (model.root_type < 2) {
     // 显示搜索框
     html += search_bar;
   }
@@ -710,11 +710,11 @@ function file_code(path) {
 <div class="mdui-container">
 <pre id="editor" ></pre>
 </div>
-<div class="mdui-textfield">
+<div class="mdui-textfield" style="display:none">
 	<label class="mdui-textfield-label">下载地址</label>
 	<input class="mdui-textfield-input" type="text" value="${href}"/>
 </div>
-<a href="${href}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="${href}"  class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 
 <script src="https://cdn.staticfile.org/ace/1.4.7/ace.js"></script>
 <script src="https://cdn.staticfile.org/ace/1.4.7/ext-language_tools.js"></script>
@@ -780,7 +780,7 @@ function file_video(path) {
   player_items += `<li class="mdui-divider"></li>
                    <li class="mdui-menu-item"><a id="copy-link" class="mdui-ripple">复制链接</a></li>`;
   const playBtn = `
-      <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-menu="{target:'#player-items'}">
+      <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-menu="{target:'#player-items'}"  style="display:none">
         <i class="mdui-icon material-icons">&#xe039;</i>外部播放器播放<i class="mdui-icon material-icons">&#xe5cf;</i>
       </button>
       <ul class="mdui-menu" id="player-items">${player_items}</ul>`;
@@ -793,16 +793,16 @@ function file_video(path) {
 	</video>
 	<br>${playBtn}
 	<!-- 固定标签 -->
-	<div class="mdui-textfield">
+	<div class="mdui-textfield" style="display:none">
 	  <label class="mdui-textfield-label">下载地址</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
-	<div class="mdui-textfield">
+	<div class="mdui-textfield" style="display:none">
 	  <label class="mdui-textfield-label">HTML 引用地址</label>
 	  <textarea class="mdui-textfield-input"><video><source src="${url}" type="video/mp4"></video></textarea>
 	</div>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="${url}"  style="display:none" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
   $('#content').html(content);
   $('#copy-link').on('click', () => {
@@ -822,16 +822,16 @@ function file_audio(path) {
 	</audio>
 	<br>
 	<!-- 固定标签 -->
-	<div class="mdui-textfield">
+	<div class="mdui-textfield" style="display:none">
 	  <label class="mdui-textfield-label">下载地址</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
-	<div class="mdui-textfield">
+	<div class="mdui-textfield" style="display:none">
 	  <label class="mdui-textfield-label">HTML 引用地址</label>
 	  <textarea class="mdui-textfield-input"><audio><source src="${url}"></audio></textarea>
 	</div>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="${url}"  style="display:none" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
   $('#content').html(content);
 }
@@ -903,21 +903,21 @@ function file_image(path) {
 	    <img class="mdui-img-fluid" src="${url}"/>
     </div>
 	<br>
-	<div class="mdui-textfield">
+	<div class="mdui-textfield" style="display:none">
 	  <label class="mdui-textfield-label">下载地址</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
-	<div class="mdui-textfield">
+	<div class="mdui-textfield" style="display:none">
 	  <label class="mdui-textfield-label">HTML 引用地址</label>
 	  <input class="mdui-textfield-input" type="text" value="<img src='${url}' />"/>
 	</div>
-        <div class="mdui-textfield">
+        <div class="mdui-textfield" style="display:none">
 	  <label class="mdui-textfield-label">Markdown 引用地址</label>
 	  <input class="mdui-textfield-input" type="text" value="![](${url})"/>
 	</div>
         <br>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="${url}"  style="display:none" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons" >file_download</i></a>
     `;
   //my code
   $('#content').html(content);

@@ -794,13 +794,6 @@ function file_video(path) {
 
   const content = `
 <div class="mdui-container-fluid">
-
-	/*** <br>
-	<video class="mdui-video-fluid mdui-center" preload controls>
-	  <source src="${url}" type="video/mp4">
-	</video>
-        修改为Dplayer***/
-
 	<br>${playBtn}
         <br>
 	<div id="dplayer"></div>

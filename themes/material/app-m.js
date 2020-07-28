@@ -794,7 +794,6 @@ function file_video(path) {
 
   const content = `
 <div class="mdui-container-fluid">
-	<br>${playBtn}
         <br>
 	<div id="dplayer"></div>
 	<br>${playBtn}

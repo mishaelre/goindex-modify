@@ -814,6 +814,15 @@ function file_video(path) {
     copyToClipboard(url);
     mdui.snackbar('已复制到剪切板!');
   });
+    new DPlayer({
+    container: document.getElementById("dplayer"),
+    screenshot: true,
+		autoplay:true,
+    video: {
+      url,
+    },
+  });
+	
 }
 
 // 文件展示 音频 |mp3|flac|m4a|wav|ogg|
